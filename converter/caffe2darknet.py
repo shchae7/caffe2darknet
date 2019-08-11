@@ -1,4 +1,5 @@
-#!/home/ubuntu/anaconda2/bin/python -f 
+import sys
+sys.path.append('/home/shchae7/caffe2darknet/src/')
 
 from collections import OrderedDict
 from cfg import *
@@ -341,8 +342,6 @@ if __name__ == '__main__':
         caffemodel = sys.argv[1]
         weightfile = sys.argv[2]
 
-        
- 
     elif len(sys.argv) == 5:
         protofile = sys.argv[1]
         caffemodel = sys.argv[2]
@@ -360,6 +359,4 @@ if __name__ == '__main__':
     else:
         print('try:')
         print('  python caffe2darknet.py ResNet-50-deploy.prototxt ResNet-50-model.caffemodel ResNet-50-model.cfg ResNet-50-model.weights')
-        print('\n or try:')
-        print('  python caffe2darknet.py ResNet-50-model.caffemodel ResNet-50-model.weights')
         exit()
